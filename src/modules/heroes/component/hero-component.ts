@@ -1,5 +1,5 @@
 import {Component, CORE_DIRECTIVES, FORM_DIRECTIVES} from 'angular2/angular2';
-import {HEROES} from '../services/mock-heroes';
+import {HeroesService} from "../services/hero-service";
 
 @Component({
     selector: 'my-app',
@@ -9,9 +9,14 @@ import {HEROES} from '../services/mock-heroes';
 })
 
 export class AppComponent implements MyHero {
-    public heroes = HEROES;
+
+    public heroes: Array<Hero> = [];
     public selectedHero: Hero;
     public title = 'Tour of Heroes';
+
+    constructor(private _heroService: HeroesService) {
+        this._heroService.getHeroes().then((heroes:Hero[])  => this.heroes = heroes)
+    }
 
     onSelect(hero: Hero) {
         this.selectedHero = hero;
