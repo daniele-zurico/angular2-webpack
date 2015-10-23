@@ -12,6 +12,7 @@
       "node_modules"
   ],
   "files": [
-    "./node_modules/angular2/angular2.d.ts"
+    "./node_modules/angular2/angular2.d.ts",
+    "src/modules/heroes/component/hero.d.ts"
   ]
 }

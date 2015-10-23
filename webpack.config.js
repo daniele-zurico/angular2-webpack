@@ -22,7 +22,7 @@ module.exports = {
     ],
     // Starting point
     'app': [
-        './src/app/app.ts',
+        './src/modules/',
     ]},
     // Bundle the contain all the source code
     output: {

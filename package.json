@@ -4,11 +4,10 @@
   "dependencies": {
     "angular2": "2.0.0-alpha.44",
     "reflect-metadata": "^0.1.2",
-    "shim": "^0.6.0",
-    "systemjs": "0.19.2",
-    "ts-loader": "^0.5.6"
+    "shim": "^0.6.0"
   },
   "devDependencies": {
+    "awesome-typescript-loader": "^0.14.0",
     "html": "0.0.10",
     "jasmine-core": "^2.3.4",
     "karma": "^0.13.14",
@@ -24,6 +23,7 @@
     "karma-webpack": "^1.7.0",
     "live-server": "^0.8.2",
     "phantomjs": "1.9.18",
+    "ts-loader": "^0.5.6",
     "tsd": "^0.6.5",
     "typescript": "^1.6.2",
     "webpack": "^1.12.2",
