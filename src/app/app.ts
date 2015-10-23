@@ -7,7 +7,7 @@ class Hero {
   selector: 'my-app',
   template:`
     <h1>{{title}}</h1>
-    <h2>{{hero.name}} details!</h2>
+    <h2>{{hero.name}} details2!</h2>
     <div><label>id: </label>{{hero.id}}</div>
     <div>
       <label>name: </label>
@@ -20,7 +20,7 @@ class AppComponent {
   public title = 'Tour of Heroes';
   public hero: Hero = {
     id: 1,
-    name: 'Windstorm'
+    name: 'daniele'
   };
 }
 bootstrap(AppComponent);
