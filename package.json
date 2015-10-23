@@ -1,0 +1,37 @@
+{
+  "name": "angular2",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular2": "2.0.0-alpha.44",
+    "reflect-metadata": "^0.1.2",
+    "shim": "^0.6.0",
+    "systemjs": "0.19.2",
+    "ts-loader": "^0.5.6"
+  },
+  "devDependencies": {
+    "html": "0.0.10",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.14",
+    "karma-chrome-launcher": "0.2.1",
+    "karma-coverage": "0.5.2",
+    "karma-jasmine": "0.3.6",
+    "karma-jasmine-ajax": "^0.1.13",
+    "karma-jasmine-html-reporter-livereload": "^1.0.0",
+    "karma-jasmine-jquery": "^0.1.1",
+    "karma-phantomjs-launcher": "0.2.1",
+    "karma-phantomjs2-launcher": "^0.3.2",
+    "karma-sourcemap-loader": "0.3.6",
+    "karma-spec-reporter": "0.0.21",
+    "karma-webpack": "^1.7.0",
+    "live-server": "^0.8.2",
+    "phantomjs": "1.9.18",
+    "typescript": "^1.6.2",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "scripts": {
+    "tsc": "tsc -p src -w",
+    "start": "live-server --open=src",
+    "test": "karma start"
+  }
+}

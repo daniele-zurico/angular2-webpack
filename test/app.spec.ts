@@ -1,0 +1,7 @@
+describe('App', () => {
+
+  it('should also be able to test', () => {
+    expect(true).toBe(true);
+  });
+
+});
