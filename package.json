@@ -7,7 +7,6 @@
     "shim": "^0.6.0"
   },
   "devDependencies": {
-    "awesome-typescript-loader": "^0.14.0",
     "html": "0.0.10",
     "jasmine-core": "^2.3.4",
     "karma": "^0.13.14",
@@ -23,15 +22,13 @@
     "karma-webpack": "^1.7.0",
     "live-server": "^0.8.2",
     "phantomjs": "1.9.18",
+    "ts": "0.0.0",
     "ts-loader": "^0.5.6",
-    "tsd": "^0.6.5",
-    "tslint": "^2.5.1",
     "typescript": "^1.6.2",
     "webpack": "^1.12.2",
     "webpack-dev-server": "^1.12.1"
   },
   "scripts": {
-    "tsc": "tsc -p src -w",
     "start": "live-server --open=src",
     "test": "karma start"
   }

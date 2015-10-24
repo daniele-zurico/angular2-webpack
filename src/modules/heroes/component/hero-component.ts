@@ -8,7 +8,7 @@ import {HeroesService} from "../services/hero-service";
     styleUrls:['./modules/heroes/tpl/hero.css'],
 })
 
-export class AppComponent implements MyHero{
+export class AppComponent implements MyHero {
     public hero: Hero = {
         id: 1,
         name: 'Windstorm'
