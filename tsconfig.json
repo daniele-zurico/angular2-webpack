@@ -6,13 +6,13 @@
     "target": "es5",
     "module": "commonjs",
     "removeComments": true,
-    "sourceMap": false
+    "sourceMap": true
   },
   "exclude": [
       "node_modules"
   ],
   "files": [
     "./node_modules/angular2/angular2.d.ts",
-    "src/modules/heroes/component/hero.d.ts",
+    "./src/modules/heroes/component/hero.d.ts"
   ]
 }

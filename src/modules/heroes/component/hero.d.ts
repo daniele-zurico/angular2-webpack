@@ -9,7 +9,6 @@ declare class Hero {
 interface MyHero {
     heroes:Hero[];
     selectedHero: Hero;
-    title:String;
     onSelect(hero: Hero);
     getSelectedClass(hero: Hero);
 }

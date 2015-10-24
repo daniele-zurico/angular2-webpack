@@ -1,10 +1,9 @@
 var webpack = require('webpack');
-
-//detect production or development envirnment
-var production = process.env.NODE_ENV === "production";
-
+/*
+ * Minimum configuration for fun Angular2 + Webpack
+ */
 module.exports = {
-    devtool: 'eval-source-map',
+    devtool: 'source-map',
     debug: true,
 
     verbose: true,
@@ -13,12 +12,13 @@ module.exports = {
     stats: {
         colors: true,
         reasons: true
-    },  
+    },
     entry: {
     // Create a vendor bundle with all the base libraries (look down at CommonsChunkPlugin)
     'vendor': [
+        'zone.js',
         'reflect-metadata',
-        'angular2/angular2'   
+        'angular2/angular2'
     ],
     // Starting point
     'app': [
@@ -28,7 +28,7 @@ module.exports = {
     output: {
         path: __dirname,
         filename: "./dist/bundle.min.js",
-   
+
     },
     // File accepted by webpack
     resolve: {
@@ -37,8 +37,21 @@ module.exports = {
     // Compiler
     module: {
         loaders: [
-            { test: /\.ts$/, loader: 'ts-loader' }
-        ]
+          { test: /\.ts$/, loader: 'ts', query: {'ignoreDiagnostics': []},
+            exclude: [
+              /\.min\.js$/,
+              /\.spec\.ts$/,
+              /\.e2e\.ts$/,
+              /web_modules/,
+              /test/,
+              /node_modules/
+            ]
+          }
+        ],
+      noParse: [
+        /rtts_assert\/src\/rtts_assert/,
+        /reflect-metadata/
+      ]
     },
     plugins: [
         // Merge all the vendor in a new bundle
@@ -61,5 +74,5 @@ module.exports = {
       // Prevents the inclusion of duplicate code into your bundle
       new webpack.optimize.DedupePlugin()
     ]
-  
+
 };
