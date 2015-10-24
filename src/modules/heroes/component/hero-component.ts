@@ -9,20 +9,8 @@ import {HeroesService} from "../services/hero-service";
 })
 
 export class AppComponent implements MyHero {
-    public hero: Hero = {
-        id: 1,
-        name: 'Windstorm'
-    };
-
-    public heroes: Array<Hero> = [];
-    public selectedHero: Hero = {
-        id: 16,
-        name: "RubberMan"
-    };
-    public test = {
-        id: 16,
-        name: "RubberMan"
-    };
+    public heroes: Array<Hero>;
+    public selectedHero: Hero;
 
     constructor(private _heroService: HeroesService) {
         this._heroService.getHeroes().then((heroes:Hero[])  => this.heroes = heroes)

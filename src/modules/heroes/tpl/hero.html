@@ -1,5 +1,3 @@
-<h2>My Heroes {{hero.name}}</h2>
-<input [(ng-model)]="hero.name" placeholder="name"></div>
 <ul class="heroes">
     <li *ng-for="#hero of heroes"
         [ng-class]="getSelectedClass(hero)"
