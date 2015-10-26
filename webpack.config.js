@@ -74,16 +74,16 @@ module.exports = {
             filename: './target/bundle.vendor.min.js'
         }),
         // Create the minify version
-        //new webpack.optimize.UglifyJsPlugin({
-        //    compress: {
-        //        warnings: false,
-        //        drop_debugger: false
-        //    },
-        //    output: {
-        //        comments: false
-        //    },
-        //    beautify: false
-        //}),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false,
+                drop_debugger: false
+            },
+            output: {
+                comments: false
+            },
+            beautify: false
+        }),
       // Prevents the inclusion of duplicate code into your bundle
       new webpack.optimize.DedupePlugin()
     ]
