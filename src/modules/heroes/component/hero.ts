@@ -1,16 +1,18 @@
 import {Component, CORE_DIRECTIVES, FORM_DIRECTIVES} from 'angular2/angular2';
 import {HeroesService} from "../services/hero-service";
+import {Alert} from 'ng2-bootstrap/ng2-bootstrap';
 
 @Component({
     selector: 'my-app',
     templateUrl: './modules/heroes/tpl/hero.html',
-    directives: [CORE_DIRECTIVES, FORM_DIRECTIVES],
+    directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, Alert],
     styleUrls:['./modules/heroes/tpl/hero.css'],
 })
 
 export class AppComponent {
     public heroes: Array<Hero>;
     public selectedHero: Hero;
+    private alerts:Array<Object> = [];
 
     constructor(private _heroService: HeroesService) {
         this._heroService.getHeroes().then((heroes:Hero[])  => this.heroes = heroes)
@@ -22,5 +24,9 @@ export class AppComponent {
 
     getSelectedClass(hero: Hero) {
         return { 'selected': hero === this.selectedHero };
+    }
+
+    addAlert(){
+        this.alerts.push({msg: 'Another alert!', closable: true});
     }
 }

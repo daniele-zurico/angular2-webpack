@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "angular2": "2.0.0-alpha.44",
+    "ng2-bootstrap": "^0.44.4",
     "reflect-metadata": "^0.1.2",
     "shim": "^0.6.0"
   },

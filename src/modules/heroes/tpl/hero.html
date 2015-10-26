@@ -16,3 +16,9 @@
         <input [(ng-model)]="selectedHero.name" placeholder="name"></input>
     </div>
 </div>
+
+<alert *ng-for="#alert of alerts;#i = index" [type]="alert.type" dismissible="true">
+    {{ alert.msg }}
+</alert>
+
+<button type="button" class='btn btn-primary' (click)="addAlert()">Add Alert</button>

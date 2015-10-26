@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var path = require('path');
 /*
  * Minimum configuration for fun Angular2 + Webpack
  */
@@ -18,7 +19,8 @@ module.exports = {
     'vendor': [
         'zone.js',
         'reflect-metadata',
-        'angular2/angular2'
+        'angular2/angular2',
+        'rx',
     ],
     // Starting point
     'app': [
@@ -32,7 +34,10 @@ module.exports = {
     },
     // File accepted by webpack
     resolve: {
-        extensions: ['', '.webpack.js', '.web.js', '.ts', '.js']
+        extensions: ['', '.webpack.js', '.web.js', '.ts', '.js'],
+        alias: {
+
+        }
     },
     // Compiler
     module: {
@@ -43,8 +48,7 @@ module.exports = {
               /\.spec\.ts$/,
               /\.e2e\.ts$/,
               /web_modules/,
-              /test/,
-              /node_modules/
+              /test/
             ]
           }
         ],
@@ -61,16 +65,16 @@ module.exports = {
             filename: './dist/bundle.vendor.min.js'
         }),
         // Create the minify version
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false,
-                drop_debugger: false
-            },
-            output: {
-                comments: false
-            },
-            beautify: false
-        }),
+        //new webpack.optimize.UglifyJsPlugin({
+        //    compress: {
+        //        warnings: false,
+        //        drop_debugger: false
+        //    },
+        //    output: {
+        //        comments: false
+        //    },
+        //    beautify: false
+        //}),
       // Prevents the inclusion of duplicate code into your bundle
       new webpack.optimize.DedupePlugin()
     ]
