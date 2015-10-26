@@ -1,11 +1,14 @@
 {
   "version": "1.6.2",
   "compilerOptions": {
+    "target": "ES5",
+    "module": "commonjs",
+    "declaration": false,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "noLib": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es5",
-    "module": "commonjs",
-    "removeComments": true,
     "sourceMap": true
   },
   "exclude": [
@@ -13,7 +16,9 @@
   ],
   "files": [
     "./node_modules/angular2/angular2.d.ts",
-    "./src/modules/heroes/component/hero.d.ts",
-    "./typings/rx/rx.d.ts"
+    "./typings/rx/rx.d.ts",
+    "./src/typings/runtime.d.ts",
+    "./src/typings/webpack.d.ts",
+    "./src/modules/heroes/component/hero.d.ts"
   ]
 }

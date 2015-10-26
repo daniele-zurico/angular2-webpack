@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "dependencies": {
     "angular2": "2.0.0-alpha.44",
+    "css-loader": "^0.21.0",
     "ng2-bootstrap": "^0.44.4",
+    "node-sass": "^3.4.0",
     "reflect-metadata": "^0.1.2",
-    "shim": "^0.6.0"
+    "sass-loader": "^3.1.1",
+    "shim": "^0.6.0",
+    "style-loader": "^0.13.0"
   },
   "devDependencies": {
     "html": "0.0.10",

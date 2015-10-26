@@ -1,12 +1,12 @@
 import {Component, CORE_DIRECTIVES, FORM_DIRECTIVES} from 'angular2/angular2';
 import {HeroesService} from "../services/hero-service";
 import {Alert} from 'ng2-bootstrap/ng2-bootstrap';
+require('./../tpl/hero.scss');
 
 @Component({
     selector: 'my-app',
     templateUrl: './modules/heroes/tpl/hero.html',
     directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, Alert],
-    styleUrls:['./modules/heroes/tpl/hero.css'],
 })
 
 export class AppComponent {

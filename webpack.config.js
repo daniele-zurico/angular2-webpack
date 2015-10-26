@@ -1,5 +1,4 @@
 var webpack = require('webpack');
-var path = require('path');
 /*
  * Minimum configuration for fun Angular2 + Webpack
  */
@@ -42,7 +41,11 @@ module.exports = {
     // Compiler
     module: {
         loaders: [
-          { test: /\.ts$/, loader: 'ts', query: {'ignoreDiagnostics': []},
+          //typescript compiler
+          {
+            test: /\.ts$/,
+            loader: 'ts',
+            query: {'ignoreDiagnostics': []},
             exclude: [
               /\.min\.js$/,
               /\.spec\.ts$/,
@@ -50,6 +53,12 @@ module.exports = {
               /web_modules/,
               /test/
             ]
+          },
+          //sass compiler
+          {
+            test: /\.scss$/,
+            loader: "style!css!sass",
+            exclude: /node_modules|bower_components|vendor/
           }
         ],
       noParse: [
