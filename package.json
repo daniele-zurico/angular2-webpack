@@ -7,6 +7,7 @@
     "ng2-bootstrap": "^0.44.4",
     "node-sass": "^3.4.0",
     "reflect-metadata": "^0.1.2",
+    "rx": "^4.0.6",
     "sass-loader": "^3.1.1",
     "shim": "^0.6.0",
     "style-loader": "^0.13.0"

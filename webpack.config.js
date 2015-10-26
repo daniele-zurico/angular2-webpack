@@ -28,7 +28,7 @@ module.exports = {
     // Bundle the contain all the source code
     output: {
         path: __dirname,
-        filename: "./dist/bundle.min.js",
+        filename: "./target/bundle.min.js",
 
     },
     // File accepted by webpack
@@ -71,7 +71,7 @@ module.exports = {
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
             minChunks: Infinity,
-            filename: './dist/bundle.vendor.min.js'
+            filename: './target/bundle.vendor.min.js'
         }),
         // Create the minify version
         //new webpack.optimize.UglifyJsPlugin({
