@@ -17,6 +17,7 @@ Install:
 Run:
 
 - live-server
+- npm run test (to run karma)
 
 Build:
 
